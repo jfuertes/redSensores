@@ -34,6 +34,12 @@ var app = angular.module('eissonApp', [
           controller: 'AcercaController',
           activetab: 'acerca'
         }).
+        when('/historico', {
+          templateUrl: 'views/historico.php',
+          caseInsensitiveMatch: true,
+          controller: 'historicoController',
+          activetab: 'historico'
+        }).
         
         otherwise({
           redirectTo: '/acerca'

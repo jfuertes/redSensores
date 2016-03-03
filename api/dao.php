@@ -2,7 +2,7 @@
 class DAO{
 
 	function getCentros(){
-		require_once('config/mysql.php');
+		require_once('config/mysql2.php');
 		$db              = new EissonConnect();
 		$dbh             = $db->enchufalo();
 		$q = 'SELECT * from tb_centros ';

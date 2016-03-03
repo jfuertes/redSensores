@@ -24,12 +24,15 @@
 
                   <ul class="right hide-on-med-and-down" ng-controller='TabsController'>
                     <li ng-class="{active: $route.current.activetab == 'acerca'}" ><a href="#/acerca">Acerca de</a></li>
-                    <li ng-class="{active: $route.current.activetab == 'centros'}" ><a href="#/centros">Centros</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'historico'}" ><a href="#/historico">historico</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'centros'}" ><a href="#/centros">Mapa</a></li>
+                    
                   </ul>
 
                   <ul id="nav-mobile" class="side-nav" ng-controller='TabsController'>
                       <li ng-class="{active: $route.current.activetab == 'acerca'}" ><a href="#/acerca">Acerca de</a></li>
-                    <li ng-class="{active: $route.current.activetab == 'centros'}" ><a href="#/centros">Centros</a></li>
+                      <li ng-class="{active: $route.current.activetab == 'historico'}" ><a href="#/historico">historico</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'centros'}" ><a href="#/centros">Mapa</a></li>
                   </ul>
 
                   <a href="#" data-activates="nav-mobile"
@@ -84,6 +87,9 @@
 
     <script src="app/controllers.js"></script>
     <script src="app/app.js"></script>
+
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
 
 </body>
 </html>

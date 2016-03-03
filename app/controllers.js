@@ -25,6 +25,11 @@ window.map="";
      $scope.$route = $route;
   }])
 
+  .controller('historicoController',['$scope', '$route','$http', function($scope, $route, $http){
+    ////console.log($route.current);
+     $scope.$route = $route;
+  }])
+
 .controller('CentrosController',['$scope', '$http', function($scope, $http){
 
   $scope.first=true;
@@ -112,7 +117,7 @@ var beachMarker2 = new google.maps.Marker({
     icon: centroimg
     
   });
-infoWindow.open(map, beachMarker2);
+//infoWindow.open(map, beachMarker2);
 
         }, function() { $scope.handleLocationError(true, infoWindow, map.getCenter()); });
       } else {
@@ -157,10 +162,10 @@ infoWindow.open(map, beachMarker2);
          }
 
          infoWindow = new google.maps.InfoWindow({
-            content: "<div id='up'><div id='up_right'><table style='font-size: 0.95em;'><tbody><tr><td>"+data.tipo+"</td></tr><tr>"+
-            "<td><b>"+data.nombre+"</b></td></tr></table></div><div id='up_left'><img src='img/centros_big.png'/></div></div>"+"<hr>"+"<table style='font-size: 0.875em;'><tr><td><i class='fa fa-map-marker fa-1x'></i></td><td>"+data.direccion+", "+data.distrito+", "+data.provincia+", "+data.departamento+"</td>"+
-          "</tr><tr><td><i class='fa fa-phone fa-1.5x'></i></td><td>"+data.telefono+"</td></tr><tr><td><i class='fa fa-clock-o fa-1x'></i></td><td>"+data.horario+"</td>"+
-          "</tr><tr><td><i class='fa fa-user fa-1x'></i></td><td>"+data.resp+"</td></tr></tbody></table>",
+            content: "<div id='up'><div id='up_right'><table style='font-size: 0.95em;'><tbody><tr><td>Sensor Prueba</td></tr><tr>"+
+            "<td><b>SISTEMA DE SENSORES LIMA</b></td></tr></table></div><div id='up_left'><img src='img/centros_big.png'/></div></div>"+"<hr>"+"<table style='font-size: 0.875em;'><tr><td><i class='fa fa-map-marker fa-1x'></i></td><td>"+data.direccion+", "+data.distrito+", "+data.provincia+", "+data.departamento+"</td>"+
+          "</tr><tr><td><i class='fa fa-phone fa-1.5x'></i></td><td>Temperatura Actual 33°C - Temperatura promedio 30°C</td></tr><tr><td><i class='fa fa-clock-o fa-1x'></i></td><td>24h/7d</td>"+
+          "</tr><tr><td><i class='fa fa-user fa-1x'></i></td><td>Municipalidad de LIMA</td></tr></tbody></table>",
           maxHeight: 400,
           maxWidth: 300
          });
